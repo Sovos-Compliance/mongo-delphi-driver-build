@@ -8,3 +8,8 @@ __history
 *.exe
 *.dll
 bin/*
+/intermediate/
+/bin/
+/*.sdf
+/*.suo
+/*.opensdf
