@@ -29,8 +29,8 @@ set outputFile=..\..\..\TestResults\dunit-result-xe4_Win32_Release.xml
 call :REPLACE
 cd ..\DebugOnDemand\
 call DelphiMongoClientTests_XE4.exe -console "..\..\..\TestResults\Win32\DebugOnDemand\dunit-result-xe4.xml"
-set oldStr=DelphiMongoClientTests.exe
-set newStr=DelphiMongoClientTests_Win32_DebugOnDemand.exe
+set oldStr=DelphiMongoClientTests_XE4.exe
+set newStr=DelphiMongoClientTests_XE4_Win32_DebugOnDemand.exe
 set inputFile=..\..\..\TestResults\Win32\DebugOnDemand\dunit-result-xe4.xml
 set outputFile=..\..\..\TestResults\dunit-result-xe4_Win32_DebugOnDemand.xml
 call :REPLACE
