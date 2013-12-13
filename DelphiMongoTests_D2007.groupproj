@@ -1,0 +1,34 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5a15788a-cb1d-45a6-8f12-223e16451368}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="DelphiMongoClientTests">
+    <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests.dproj" Targets="" />
+  </Target>
+  <Target Name="DelphiMongoClientTests:Clean">
+    <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="DelphiMongoClientTests:Make">
+    <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="DelphiMongoClientTests" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="DelphiMongoClientTests:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="DelphiMongoClientTests:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>
