@@ -1,0 +1,1 @@
+msbuild %1 "/p:config=%2;Platform=%3"

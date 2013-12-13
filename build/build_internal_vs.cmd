@@ -1,0 +1,1 @@
+msbuild ..\MongoC.sln "/p:Configuration=%1;Platform=%2"
