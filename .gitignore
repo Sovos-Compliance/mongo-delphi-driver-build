@@ -13,3 +13,6 @@ bin/*
 /*.sdf
 /*.suo
 /*.opensdf
+/MongoDB/
+/*.~dsk
+/*.dsk
