@@ -1,0 +1,1 @@
+copy \\conveydev.com\files\dev\Repository\Development-Tools\Software\Mongo\bin\* ..\MongoDB
