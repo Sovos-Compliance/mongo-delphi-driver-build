@@ -15,3 +15,4 @@ bin/*
 /*.opensdf
 /*.~dsk
 /*.dsk
+/TestResults/
