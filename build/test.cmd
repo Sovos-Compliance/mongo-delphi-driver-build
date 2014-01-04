@@ -88,12 +88,5 @@ if %any_error% EQU 1 exit /B 1
 exit /B
 
 :REPLACE
-if "%oldStr%"=="" findstr "^::" "%~f0"&GOTO:EOF
-for /f "tokens=1,* delims=]" %%A in ('"type %inputFile%|find /n /v """') do (
-    set "line=%%B"
-    if defined line (
-        call set "line=echo.%%line:%oldStr%=%newStr%%%"
-        for /f "delims=" %%X in ('"echo."%%line%%""') do %%~X >> %outputFile%
-    ) ELSE echo. >> %outputFile%
-)
+powershell -Command "& {(Get-Content %inputFile%) -replace '%oldStr%', '%newStr%' | Set-Content %outputFile%}"
 GOTO :EOF
