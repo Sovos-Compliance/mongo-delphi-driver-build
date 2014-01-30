@@ -1,1 +1,1 @@
-copy \\conveydev.com\files\dev\Repository\third-party-software-installers\Mongo\bin\* ..\MongoDB
+robocopy %1\user\MongoDB\v2.5.4c ..\MongoDB /ZB /X /TEE
