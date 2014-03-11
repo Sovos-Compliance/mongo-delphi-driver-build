@@ -13,3 +13,9 @@
 [submodule "__submodules/delphi-fastmm"]
 	path = __submodules/delphi-fastmm
 	url = git@github.com:Convey-Compliance/delphi-fastmm.git
+[submodule "__submodules/convey-private-libs"]
+	path = __submodules/convey-private-libs
+	url = git@github.com:Convey-Compliance/convey-private-libs.git
+[submodule "__submodules/convey-public-libs"]
+	path = __submodules/convey-public-libs
+	url = git@github.com:Convey-Compliance/convey-public-libs.git
