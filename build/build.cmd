@@ -4,12 +4,6 @@
 
 @SET PATH=%FrameworkDir%%FrameworkVersion%;%FrameworkSDKDir%;%PATH%
 
-call build_internal_vs Release x64
-call build_internal_vs Release Win32
-call build_internal_vs Debug x64
-call build_internal_vs Debug Win32
-
-
 call "C:\Program Files (x86)\Embarcadero\RAD Studio\11.0\bin\rsvars.bat"
 call build_internal_delphixe4 ..\DelphiMongoTests.groupproj Release Win64
 call build_internal_delphixe4 ..\DelphiMongoTests.groupproj Release Win32
