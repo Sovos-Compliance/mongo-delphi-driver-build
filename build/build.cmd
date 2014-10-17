@@ -13,5 +13,8 @@ call build_internal_delphixe4 ..\DelphiMongoTests.groupproj DebugOnDemand Win64
 call build_internal_delphixe4 ..\DelphiMongoTests.groupproj DebugOnDemand Win32
 
 call "C:\Program Files\Borland\BDS\5.0\bin\rsvars.bat"
+:: change FrameworkDir64 to FrameworkDir for 32-bit compilation
+set FrameworkDir=C:\Windows\Microsoft.NET\Framework\
+set PATH=%FrameworkDir%%FrameworkVersion%;%FrameworkSDKDir%;%PATH%
 call build_internal_delphid2007 ..\DelphiMongoTests_D2007.groupproj Debug Win32
 call build_internal_delphid2007 ..\DelphiMongoTests_D2007.groupproj Release Win32
