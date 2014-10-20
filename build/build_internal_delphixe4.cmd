@@ -1,1 +1,1 @@
-msbuild %1 "/p:config=%2;Platform=%3"
+msbuild ..\DelphiMongoTests_XE4.groupproj "/p:config=%1;Platform=%2;DCC_ConsoleTarget=true"

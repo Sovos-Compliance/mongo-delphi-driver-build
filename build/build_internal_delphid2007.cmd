@@ -1,1 +1,1 @@
-msbuild %1 "/p:Configuration=%2" /t:Build
+msbuild ..\DelphiMongoTests.groupproj /p:Configuration=%1;DCC_ConsoleTarget=true /t:Build
