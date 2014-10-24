@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2A0AF2A7-7302-43C4-9D29-96073C07724F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DelphiMongoClientTests_XE4">
+        <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj"/>
+    </Target>
+    <Target Name="DelphiMongoClientTests_XE4:Clean">
+        <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiMongoClientTests_XE4:Make">
+        <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DelphiMongoClientTests_XE4"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DelphiMongoClientTests_XE4:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DelphiMongoClientTests_XE4:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
