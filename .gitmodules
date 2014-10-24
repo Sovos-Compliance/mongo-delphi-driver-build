@@ -10,3 +10,6 @@
 [submodule "__submodules/convey-public-libs"]
 	path = __submodules/convey-public-libs
 	url = git@github.com:Convey-Compliance/convey-public-libs.git
+[submodule "__submodules/dunitgroup-dunit"]
+	path = __submodules/dunitgroup-dunit
+	url = git@bucket.convey.com:Convey/dunitgroup-dunit.git
