@@ -16,5 +16,8 @@ robocopy %1\user\mongoc-dll ..\bin\x64\Debug mongoc_d64_v1-0-1.dll /ZB /X /TEE
 robocopy %1\user\mongoc-dll ..\bin\x64\DebugOnDemand mongoc_d64_v1-0-1.dll /ZB /X /TEE 
 robocopy %1\user\mongoc-dll ..\bin\x64\Release mongoc_r64_v1-0-1.dll /ZB /X /TEE
 
+:: rename to test calling functions from custom dll
+rename ..\bin\Win32\DebugOnDemand\mongoc_d32_v1-0-1.dll mongoc.dll
+rename ..\bin\x64\DebugOnDemand\mongoc_d64_v1-0-1.dll mongoc.dll
 
 exit /B 0

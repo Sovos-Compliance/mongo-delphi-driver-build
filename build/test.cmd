@@ -1,5 +1,5 @@
 set any_error=0
-rd ..\TestResults /S /Q
+md ..\TestResults
 
 REM Let's run our 32 bits mode tests, compiled with Delphi 2007 and Delphi XE4
 set oldStr=DelphiMongoClientTests.exe
@@ -27,21 +27,21 @@ set inputFile=DelphiMongoClientTests_XE4.xml
 call DelphiMongoClientTests_XE4.exe
 if ERRORLEVEL 1 set any_error=1
 
-call DelphiMongoClientTests_XE4.exe
-if ERRORLEVEL 1 set any_error=1
-
 set newStr=DelphiMongoClientTests_XE4_Win32_Release.exe
 set outputFile=..\..\..\TestResults\dunit-result-xe4_Win32_Release.xml
 call :REPLACE
 
 cd ..\Debug\
 
+call DelphiMongoClientTests_XE4.exe
+if ERRORLEVEL 1 set any_error=1
+
 set newStr=DelphiMongoClientTests_XE4_Win32_Debug.exe
 set outputFile=..\..\..\TestResults\dunit-result-xe4_Win32_Debug.xml
 call :REPLACE
 
 cd ..\DebugOnDemand\
-call DelphiMongoClientTests_XE4.exe
+call DelphiMongoClientTests_XE4.exe mongoc.dll
 if ERRORLEVEL 1 set any_error=1
 
 set newStr=DelphiMongoClientTests_XE4_Win32_DebugOnDemand.exe
@@ -64,7 +64,7 @@ set outputFile=..\..\..\TestResults\dunit-result-xe4_x64_Release.xml
 call :REPLACE
 
 cd ..\DebugOnDemand\
-call DelphiMongoClientTests_XE4.exe
+call DelphiMongoClientTests_XE4.exe mongoc.dll
 if ERRORLEVEL 1 set any_error=1
 set newStr=DelphiMongoClientTests_XE4_x64_DebugOnDemand.exe
 set outputFile=..\..\..\TestResults\dunit-result-xe4_x64_DebugOnDemand.xml
