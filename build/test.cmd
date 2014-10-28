@@ -5,7 +5,14 @@ REM Let's run our 32 bits mode tests, compiled with Delphi 2007 and Delphi XE4
 set oldStr=DelphiMongoClientTests.exe
 set inputFile=DelphiMongoClientTests.xml
 
-cd ..\bin\Win32\Debug\
+cd ..\bin\d5\release\
+call DelphiMongoClientTests.exe
+if ERRORLEVEL 1 set any_error=1
+set newStr=DelphiMongoClientTests_win32_release.exe
+set outputFile=..\..\..\TestResults\dunit-result-d5_win32_release.xml
+call :REPLACE
+
+cd ..\..\Win32\Debug\
 call DelphiMongoClientTests.exe
 if ERRORLEVEL 1 set any_error=1
 

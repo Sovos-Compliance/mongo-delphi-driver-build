@@ -27,6 +27,8 @@ call build_internal_delphid2007 Debug
 if ERRORLEVEL 1 goto fail
 call build_internal_delphid2007 Release
 if ERRORLEVEL 1 goto fail
+call build_internal_delphi5
+if ERRORLEVEL 1 goto fail
 
 exit /B 0
 
