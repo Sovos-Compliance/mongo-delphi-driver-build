@@ -1,3 +1,4 @@
+@ECHO OFF
 set any_error=0
 rd ..\TestResults /S /Q
 
