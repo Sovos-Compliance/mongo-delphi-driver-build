@@ -13,9 +13,3 @@
 [submodule "__submodules/dunitgroup-dunit"]
 	path = __submodules/dunitgroup-dunit
 	url = git@bucket.convey.com:Convey/dunitgroup-dunit.git
-[submodule "__submodules/convey-libs"]
-	path = __submodules/convey-libs
-	url = git@bucket.convey.com:Convey/convey-libs.git
-[submodule "__submodules/convey-temp-libs"]
-	path = __submodules/convey-temp-libs
-	url = git@bucket.convey.com:Convey/convey-temp-libs.git
