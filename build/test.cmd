@@ -88,8 +88,7 @@ rd ..\MongoDB\MongoDataReplica_1 /S /Q
 rd ..\MongoDB\MongoDataReplica_2 /S /Q
 rd ..\MongoDB\MongoDataReplica_3 /S /Q
 
-if %any_error% EQU 1 exit /B 1
-exit /B
+exit /B %any_error%
 
 :REPLACE
 powershell -Command "& {(Get-Content %inputFile%) -replace '%oldStr%', '%newStr%' | Set-Content %outputFile%}"
