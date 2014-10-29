@@ -12,4 +12,4 @@
 	url = git@github.com:Convey-Compliance/convey-public-libs.git
 [submodule "__submodules/dunitgroup-dunit"]
 	path = __submodules/dunitgroup-dunit
-	url = git@bucket.convey.com:Convey/dunitgroup-dunit.git
+	url = git@github.com:Convey-Compliance/dunitgroup-dunit.git
