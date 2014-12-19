@@ -1,1 +1,1 @@
-msbuild ..\DelphiMongoTests.groupproj /p:Configuration=%1;DCC_ConsoleTarget=true /t:Build
+msbuild ..\DelphiMongoTests_2007.groupproj /p:Configuration=%1;DCC_ConsoleTarget=true /t:Build
