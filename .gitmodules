@@ -1,6 +1,3 @@
-[submodule "__submodules/mongo-delphi-driver"]
-	path = __submodules/mongo-delphi-driver
-	url = git@github.com:Convey-Compliance/mongo-delphi-driver.git
 [submodule "__submodules/delphi-fastmm"]
 	path = __submodules/delphi-fastmm
 	url = git@github.com:Convey-Compliance/delphi-fastmm.git
