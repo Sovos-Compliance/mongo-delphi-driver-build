@@ -13,9 +13,9 @@ call build_internal_delphixe4 Debug Win64
 if ERRORLEVEL 1 goto fail
 call build_internal_delphixe4 Debug Win32
 if ERRORLEVEL 1 goto fail
-call build_internal_delphixe4 DebugOnDemand Win64
+call build_internal_delphixe4 DynamicDllLoad Win64
 if ERRORLEVEL 1 goto fail
-call build_internal_delphixe4 DebugOnDemand Win32
+call build_internal_delphixe4 DynamicDllLoad Win32
 if ERRORLEVEL 1 goto fail
 
 call "C:\Program Files\Borland\BDS\5.0\bin\rsvars.bat"

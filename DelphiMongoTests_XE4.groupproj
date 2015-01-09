@@ -3,7 +3,7 @@
         <ProjectGuid>{2A0AF2A7-7302-43C4-9D29-96073C07724F}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj">
+        <Projects Include="__submodules\mongoc-wrapper-delphi\tests\tests_mongoc_wrapper_delphi_xe4.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -14,23 +14,23 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="DelphiMongoClientTests_XE4">
-        <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj"/>
+    <Target Name="tests_mongoc_wrapper_delphi_xe4">
+        <MSBuild Projects="__submodules\mongoc-wrapper-delphi\tests\tests_mongoc_wrapper_delphi_xe4.dproj"/>
     </Target>
-    <Target Name="DelphiMongoClientTests_XE4:Clean">
-        <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj" Targets="Clean"/>
+    <Target Name="tests_mongoc_wrapper_delphi_xe4:Clean">
+        <MSBuild Projects="__submodules\mongoc-wrapper-delphi\tests\tests_mongoc_wrapper_delphi_xe4.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="DelphiMongoClientTests_XE4:Make">
-        <MSBuild Projects="__submodules\mongo-delphi-driver\Tests\DelphiMongoClientTests_XE4.dproj" Targets="Make"/>
+    <Target Name="tests_mongoc_wrapper_delphi_xe4:Make">
+        <MSBuild Projects="__submodules\mongoc-wrapper-delphi\tests\tests_mongoc_wrapper_delphi_xe4.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="DelphiMongoClientTests_XE4"/>
+        <CallTarget Targets="tests_mongoc_wrapper_delphi_xe4"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DelphiMongoClientTests_XE4:Clean"/>
+        <CallTarget Targets="tests_mongoc_wrapper_delphi_xe4:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DelphiMongoClientTests_XE4:Make"/>
+        <CallTarget Targets="tests_mongoc_wrapper_delphi_xe4:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
