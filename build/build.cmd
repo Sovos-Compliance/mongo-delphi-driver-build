@@ -1,4 +1,3 @@
-@echo off
 SET FrameworkDir=C:\Windows\Microsoft.NET\Framework\
 SET FrameworkVersion=v4.0.30319
 SET FrameworkSDKDir=
