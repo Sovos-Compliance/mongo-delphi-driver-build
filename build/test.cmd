@@ -1,5 +1,12 @@
 set any_error=0
+
+rd ..\TestResults /S /Q
 md ..\TestResults
+
+cd ..\mongodb
+rd MongoData /S /Q
+md MongoData
+start "27017" /MIN mongod.exe --quiet --smallfiles --dbpath MongoData
 
 cd ..\bin\Win32\release
 set suffix=win32_release
@@ -24,7 +31,7 @@ call :REPLACE
 
 cd ..\DynamicDllLoad
 set suffix=win32_DynamicDllLoad
-set args=libbson.dll
+set args=libbson.dll libmongoc.dll
 
 set test=tests_mongoc_wrapper_delphi_xe4
 call :REPLACE
@@ -44,27 +51,18 @@ call :REPLACE
 
 cd ..\DynamicDllLoad
 set suffix=win64_DynamicDllLoad
-set args=libbson.dll
+set args=libbson.dll libmongoc.dll
 
 set test=tests_mongoc_wrapper_delphi_xe4
 call :REPLACE
 set args=
 
-ping 1.1.1.111 -n 1 -w 3000 > nul
-
-rem Let's go back to our Build folder
 cd ..\..\..\Build
-
-rem Remove all the databases generated during the tests
-rd ..\MongoDB\MongoData /S /Q
-rd ..\MongoDB\MongoDataReplica_1 /S /Q
-rd ..\MongoDB\MongoDataReplica_2 /S /Q
-rd ..\MongoDB\MongoDataReplica_3 /S /Q
-
+taskkill /F /T /IM mongod.exe
 exit /B %any_error%
 
 :REPLACE
-call %test% %args%
+%test%.exe %args%
 if ERRORLEVEL 1 set any_error=1
 powershell -Command "& {(Get-Content %test%.xml) -replace '%test%.exe', '%test%_%suffix%.exe' | Set-Content ..\..\..\TestResults\dunit-result-%test%_%suffix%.xml}"
 GOTO :EOF
