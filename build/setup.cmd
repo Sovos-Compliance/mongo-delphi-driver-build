@@ -1,4 +1,4 @@
-robocopy %1\user\MongoDB\v2.5.6c ..\MongoDB /ZB /X /TEE
+robocopy \\conveydev.com\files\dev\Repository\third-party-software-installers\mongo\v2.6.3c ..\MongoDB /ZB /X /TEE
 
 robocopy %1\user\libbson-dll ..\bin\Win32\Debug libbson_d32_v1-0-0.dll /ZB /X /TEE 
 robocopy %1\user\libbson-dll ..\bin\Win32\DebugOnDemand libbson_d32_v1-0-0.dll /ZB /X /TEE 
