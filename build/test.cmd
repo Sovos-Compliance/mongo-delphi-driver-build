@@ -1,9 +1,15 @@
+taskkill /F /T /IM mongod.exe
+
 set any_error=0
 
-rd ..\TestResults /S /Q
-md ..\TestResults
+cd ..
+if not exist TestResults (
+  md TestResults
+) else (
+  del /Q TestResults\*.xml
+)
 
-cd ..\mongodb
+cd mongodb
 rd MongoData /S /Q
 md MongoData
 start "27017" /MIN mongod.exe --quiet --smallfiles --dbpath MongoData
