@@ -1,4 +1,4 @@
-robocopy \\conveydev.com\files\dev\Repository\third-party-software-installers\mongo\v2.6.3c ..\MongoDB mongod.exe /ZB /X /TEE
+robocopy \\conveydev.com\files\dev\sdlc-ci\development\user\MongoDB\v3.1.2c ..\MongoDB mongod.exe /ZB /X /TEE
 
 set libbson_v=1-1-0
 set mongoc_v=1-1-0
