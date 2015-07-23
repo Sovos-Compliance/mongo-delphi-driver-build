@@ -34,8 +34,10 @@ if ERRORLEVEL 1 goto fail
 
 endlocal
 
-call build_internal_delphi5
-if ERRORLEVEL 1 goto fail
+:: Delphi 5 command line is failing compiling uLinkedListDefaultImplementor. Will not build for now.
+:: Delphi 5 support getting deprecated at Sovos
+:: call build_internal_delphi5
+:: if ERRORLEVEL 1 goto fail
 
 endlocal
 
