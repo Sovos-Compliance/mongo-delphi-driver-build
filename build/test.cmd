@@ -20,8 +20,9 @@ set suffix=win32_release
 set test=tests_mongoc_wrapper_delphi_2007
 call :REPLACE
 
-set test=tests_mongoc_wrapper_delphi_5
-call :REPLACE
+:: Won't call D5 tests anymore
+:: set test=tests_mongoc_wrapper_delphi_5
+:: call :REPLACE
 
 set test=tests_mongoc_wrapper_delphi_xe4
 call :REPLACE
