@@ -38,7 +38,7 @@ call :REPLACE
 
 cd ..\DynamicDllLoad
 set suffix=win32_DynamicDllLoad
-set args=libbson.dll libmongoc.dll
+set args=libmongoc.dll
 
 set test=tests_mongoc_wrapper_delphi_xe4
 call :REPLACE
@@ -58,7 +58,7 @@ call :REPLACE
 
 cd ..\DynamicDllLoad
 set suffix=win64_DynamicDllLoad
-set args=libbson.dll libmongoc.dll
+set args=libmongoc.dll
 
 set test=tests_mongoc_wrapper_delphi_xe4
 call :REPLACE
