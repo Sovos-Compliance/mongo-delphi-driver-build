@@ -1,19 +1,13 @@
 robocopy \\conveydev.com\files\dev\sdlc-ci\development\user\MongoDB\v3.1.2c ..\MongoDB mongod.exe /ZB /X /TEE
 
-set libbson_v=1-1-0
 set mongoc_v=1-1-5
 :: rename to test calling functions from custom dll's using dynamic loading
-robocopy %1\user\libbson-dll ..\bin\Win32\DynamicDllLoad libbson_d32_v%libbson_v%.dll /ZB /X /TEE 
 robocopy %1\user\mongoc-dll ..\bin\Win32\DynamicDllLoad mongo-client_d32_v%mongoc_v%.dll /ZB /X /TEE
-del ..\bin\Win32\DynamicDllLoad\libbson.dll
 del ..\bin\Win32\DynamicDllLoad\libmongoc.dll
 rename ..\bin\Win32\DynamicDllLoad\libbson_d32_v%libbson_v%.dll libbson.dll
 rename ..\bin\Win32\DynamicDllLoad\mongo-client_d32_v%mongoc_v%.dll libmongoc.dll
-robocopy %1\user\libbson-dll ..\bin\Win64\DynamicDllLoad libbson_d64_v%libbson_v%.dll /ZB /X /TEE 
 robocopy %1\user\mongoc-dll ..\bin\Win64\DynamicDllLoad mongo-client_d64_v%mongoc_v%.dll /ZB /X /TEE 
-del ..\bin\Win64\DynamicDllLoad\libbson.dll
 del ..\bin\Win64\DynamicDllLoad\libmongoc.dll
-rename ..\bin\Win64\DynamicDllLoad\libbson_d64_v%libbson_v%.dll libbson.dll
 rename ..\bin\Win64\DynamicDllLoad\mongo-client_d64_v%mongoc_v%.dll libmongoc.dll
 
 
